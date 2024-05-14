@@ -1,0 +1,252 @@
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=5, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+      4 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=5, Index=constrIndex, Active=True
+    Key : Lower  : Body   : Upper : Active
+      0 : 1000.0 : int[0] :  +Inf :   True
+      1 :  600.0 : int[1] :  +Inf :   True
+      2 : 5000.0 : int[2] :  +Inf :   True
+      3 : 4000.0 : int[3] :  +Inf :   True
+      4 : 8000.0 : int[4] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 0.18*int[0] + 200 + 0.105*int[0] + 0.165*int[0] + 200 + 9.26075804125 + 2737.6984889 + 0.175*int[1] + 0.4*int[1] + 0.45*int[1] + 200 + 10.28912704625 + 1213.8482485000002 + 0.06*int[2] + 0.18000000000000002*int[2] + 0.57166132 + 1143.3226399999999 + 0.48*int[3] + 200 + 0.22000000000000003*int[3] + 3.84861663125 + 877.0651665 + 0.4*int[4] + 0.325*int[4] + 0.6*int[4] + 200 + 2.041203735 + 380.0305036
+
+DEBUG:pyomo.core:Constructing Variable ONE_VAR_CONSTANT
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpm_z8lijp.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/opt/homebrew/bin/glpsol', '--write', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpp0pc3nii.glpk.raw', '--wglp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpqshbs3ay.glpk.glp', '--cpxlp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpm_z8lijp.pyomo.lp']
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=5, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+      4 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=5, Index=constrIndex, Active=True
+    Key : Lower : Body   : Upper  : Active
+      0 :  -Inf : int[0] : 1000.0 :   True
+      1 :  -Inf : int[1] :  600.0 :   True
+      2 :  -Inf : int[2] : 5000.0 :   True
+      3 :  -Inf : int[3] : 4000.0 :   True
+      4 :  -Inf : int[4] : 8000.0 :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 0.18*int[0] + 200 + 0.105*int[0] + 0.165*int[0] + 200 + 9.26075804125 + 2737.6984889 + 0.175*int[1] + 0.4*int[1] + 0.45*int[1] + 200 + 10.28912704625 + 1213.8482485000002 + 0.06*int[2] + 0.18000000000000002*int[2] + 0.57166132 + 1143.3226399999999 + 0.48*int[3] + 200 + 0.22000000000000003*int[3] + 3.84861663125 + 877.0651665 + 0.4*int[4] + 0.325*int[4] + 0.6*int[4] + 200 + 2.041203735 + 380.0305036
+
+DEBUG:pyomo.core:Constructing Variable ONE_VAR_CONSTANT
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpa6y8w6yv.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/opt/homebrew/bin/glpsol', '--write', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmp0gdy9pw6.glpk.raw', '--wglp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpkxm3a_su.glpk.glp', '--cpxlp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpa6y8w6yv.pyomo.lp']
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=5, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+      4 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=5, Index=constrIndex, Active=True
+    Key : Lower  : Body   : Upper : Active
+      0 : 1000.0 : int[0] :  +Inf :   True
+      1 : 1000.0 : int[1] :  +Inf :   True
+      2 : 1000.0 : int[2] :  +Inf :   True
+      3 : 1000.0 : int[3] :  +Inf :   True
+      4 : 1000.0 : int[4] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 0.24*int[0] + 250 + 0.63*int[0] + 0.9899999999999999*int[0] + 6.24089498125 + 2657.1688073 + 0.55*int[1] + 55 + 0.475*int[1] + 2.7*int[1] + 7.698009976250001 + 1144.7517933 + 1.08*int[2] + 400 + 0.044000000000000004*int[2] + 5.32514947 + 777.956492 + 0.2*int[3] + 2.8800000000000003*int[3] + 2.54373753125 + 842.2683905 + 0.425*int[4] + 150 + 0.225*int[4] + 3.6*int[4] + 1.832156777142857 + 354.9271152
+
+DEBUG:pyomo.core:Constructing Variable ONE_VAR_CONSTANT
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmptzhhz21i.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/opt/homebrew/bin/glpsol', '--write', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpqa4ad3vr.glpk.raw', '--wglp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpxwmevxmp.glpk.glp', '--cpxlp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmptzhhz21i.pyomo.lp']
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=5, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+      4 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=5, Index=constrIndex, Active=True
+    Key : Lower  : Body   : Upper : Active
+      0 : 1000.0 : int[0] :  +Inf :   True
+      1 : 1000.0 : int[1] :  +Inf :   True
+      2 : 1000.0 : int[2] :  +Inf :   True
+      3 : 1000.0 : int[3] :  +Inf :   True
+      4 : 1000.0 : int[4] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 0.24*int[0] + 250 + 0.63*int[0] + 0.9899999999999999*int[0] + 6.24089498125 + 2657.1688073 + 0.55*int[1] + 55 + 0.475*int[1] + 2.7*int[1] + 7.698009976250001 + 1144.7517933 + 1.08*int[2] + 400 + 0.044000000000000004*int[2] + 5.32514947 + 777.956492 + 0.2*int[3] + 2.8800000000000003*int[3] + 2.54373753125 + 842.2683905 + 0.425*int[4] + 150 + 0.225*int[4] + 3.6*int[4] + 1.832156777142857 + 354.9271152
+
+DEBUG:pyomo.core:Constructing Variable ONE_VAR_CONSTANT
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpc7qrvuix.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/opt/homebrew/bin/glpsol', '--write', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmp4lmzbse6.glpk.raw', '--wglp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpzyr257gx.glpk.glp', '--cpxlp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpc7qrvuix.pyomo.lp']
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=5, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+      4 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=5, Index=constrIndex, Active=True
+    Key : Lower  : Body   : Upper : Active
+      0 : 1000.0 : int[0] :  +Inf :   True
+      1 : 1000.0 : int[1] :  +Inf :   True
+      2 : 1000.0 : int[2] :  +Inf :   True
+      3 : 1000.0 : int[3] :  +Inf :   True
+      4 : 1000.0 : int[4] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 0.24*int[0] + 250 + 0.63*int[0] + 0.9899999999999999*int[0] + 6.24089498125 + 2657.1688073 + 0.55*int[1] + 55 + 0.475*int[1] + 2.7*int[1] + 7.698009976250001 + 1144.7517933 + 1.08*int[2] + 400 + 0.044000000000000004*int[2] + 5.32514947 + 777.956492 + 0.2*int[3] + 2.8800000000000003*int[3] + 2.54373753125 + 842.2683905 + 0.425*int[4] + 150 + 0.225*int[4] + 3.6*int[4] + 1.832156777142857 + 354.9271152
+
+DEBUG:pyomo.core:Constructing Variable ONE_VAR_CONSTANT
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpvcta67hi.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/opt/homebrew/bin/glpsol', '--write', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmp3na6c7yw.glpk.raw', '--wglp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpns_ekzhr.glpk.glp', '--cpxlp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpvcta67hi.pyomo.lp']
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=5, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+      4 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=5, Index=constrIndex, Active=True
+    Key : Lower  : Body   : Upper : Active
+      0 : 1000.0 : int[0] :  +Inf :   True
+      1 : 1000.0 : int[1] :  +Inf :   True
+      2 : 1000.0 : int[2] :  +Inf :   True
+      3 : 1000.0 : int[3] :  +Inf :   True
+      4 : 1000.0 : int[4] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 0.24*int[0] + 250 + 0.63*int[0] + 0.9899999999999999*int[0] + 6.24089498125 + 2657.1688073 + 0.55*int[1] + 55 + 0.475*int[1] + 2.7*int[1] + 7.698009976250001 + 1144.7517933 + 1.08*int[2] + 400 + 0.044000000000000004*int[2] + 5.32514947 + 777.956492 + 0.2*int[3] + 2.8800000000000003*int[3] + 2.54373753125 + 842.2683905 + 0.425*int[4] + 150 + 0.225*int[4] + 3.6*int[4] + 1.832156777142857 + 354.9271152
+
+DEBUG:pyomo.core:Constructing Variable ONE_VAR_CONSTANT
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpakimd03r.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/opt/homebrew/bin/glpsol', '--write', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpo921u3b8.glpk.raw', '--wglp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmplhb9lpaa.glpk.glp', '--cpxlp', '/var/folders/zs/wj00zsgx2jj8rgvsy7k6zb6w0000gn/T/tmpakimd03r.pyomo.lp']

@@ -1,0 +1,775 @@
+{
+  "shipments": [
+    {
+      "id": "shipment1",
+      "origin": "Los Angeles",
+      "destination": "New York",
+      "qty_units": {"dgalType": "int?"},
+      "weight_per_unit": 0.3,
+      "deadline_hours": 72,
+      "premium":1
+    },
+    {
+      "id": "shipment2",
+      "origin": "Houston",
+      "destination": "Chicago",
+      "qty_units": {"dgalType": "int?"},
+      "weight_per_unit": 0.5,
+      "deadline_hours": 48,
+      "premium":0
+    },
+    {
+      "id": "shipment3",
+      "origin": "Miami",
+      "destination": "Atlanta",
+      "qty_units": {"dgalType": "int?"},
+      "weight_per_unit": 0.2,
+      "deadline_hours": 36,
+      "premium":1
+    },
+    {
+      "id": "shipment4",
+      "origin": "Seattle",
+      "destination": "San Francisco",
+      "qty_units": {"dgalType": "int?"},
+      "weight_per_unit": 0.4,
+      "deadline_hours": 48,
+      "premium":0
+    },
+    {
+      "id": "shipment5",
+      "origin": "Boston",
+      "destination": "Philadelphia",
+      "qty_units": {"dgalType": "int?"},
+      "weight_per_unit": 0.5,
+      "deadline_hours": 96,
+      "premium":0
+    }
+  ],
+  "network": [
+    {
+      "origin": "Los Angeles",
+      "destination": "New York",
+      "routes": [
+        {
+          "route_id": "route1",
+          "segments": [
+            {
+              "from": "Los Angeles",
+              "to": "Chicago",
+              "distance_miles": 2015,
+              "available_modes": ["light_truck","medium_truck","heavy_truck","train", "air","ship"]
+            },
+            {
+              "from": "Chicago",
+              "to": "Pittsburgh",
+              "distance_miles": 460,
+              "available_modes": ["train","light_truck","medium_truck","heavy_truck", "air"]
+            },
+            {
+              "from": "Pittsburgh",
+              "to": "New York",
+              "distance_miles": 370, 
+              "available_modes": ["train","light_truck","medium_truck","heavy_truck", "air","ship"]
+            }
+          ]
+        },
+        {
+          "route_id": "route2",
+          "segments": [
+            {
+              "from": "Los Angeles",
+              "to": "Denver",
+              "distance_miles": 1020,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "air"]
+            },
+            {
+              "from": "Denver",
+              "to": "Columbus",
+              "distance_miles": 648,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train"]
+            },
+            {
+              "from": "Columbus",
+              "to": "New York",
+              "distance_miles": 535,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "Houston",
+      "destination": "Chicago",
+      "routes": [
+        {
+          "route_id": "route3",
+          "segments": [
+            {
+              "from": "Houston",
+              "to": "Memphis",
+              "distance_miles": 485,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train"]
+            },
+            {
+              "from": "Memphis",
+              "to": "St. Louis",
+              "distance_miles": 296,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            },
+            {
+              "from": "St. Louis",
+              "to": "Chicago",
+              "distance_miles": 297, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        },
+        {
+          "route_id": "route4",
+          "segments": [
+            {
+              "from": "Houston",
+              "to": "Dallas",
+              "distance_miles": 239,
+              "available_modes": ["light_truck","medium_truck","heavy_truck"]
+            },
+            {
+              "from": "Dallas",
+              "to": "Kansas City",
+              "distance_miles": 556,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train"]
+            },
+            {
+              "from": "Kansas City",
+              "to": "Chicago",
+              "distance_miles": 527, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "Miami",
+      "destination": "Atlanta",
+      "routes": [
+        {
+          "route_id": "route5",
+          "segments": [
+            {
+              "from": "Miami",
+              "to": "Orlando",
+              "distance_miles": 234,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air","ship"]
+            },
+            {
+              "from": "Orlando",
+              "to": "Jacksonville",
+              "distance_miles": 346,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train","ship"]
+            },
+            {
+              "from": "Jacksonville",
+              "to": "Atlanta",
+              "distance_miles": 346, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        },
+        {
+          "route_id": "route6",
+          "segments": [
+            {
+              "from": "Miami",
+              "to": "Tampa",
+              "distance_miles": 280,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "air","ship"]
+            },
+            {
+              "from": "Tampa",
+              "to": "Atlanta",
+              "distance_miles": 456, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "Seattle",
+      "destination": "San Francisco",
+      "routes": [
+        {
+          "route_id": "route7",
+          "segments": [
+            {
+              "from": "Seattle",
+              "to": "Portland",
+              "distance_miles": 174,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air","ship"]
+            },
+            {
+              "from": "Portland",
+              "to": "Sacramento",
+              "distance_miles": 581,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train","ship"]
+            },
+            {
+              "from": "Sacramento",
+              "to": "San Francisco",
+              "distance_miles": 87, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air","ship"]
+            }
+          ]
+        },
+        {
+          "route_id": "route8",
+          "segments": [
+            {
+              "from": "Seattle",
+              "to": "Eugene",
+              "distance_miles": 280,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train"]
+            },
+            {
+              "from": "Eugene",
+              "to": "San Francisco",
+              "distance_miles": 475, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "Boston",
+      "destination": "Philadelphia",
+      "routes": [
+        {
+          "route_id": "route9",
+          "segments": [
+            {
+              "from": "Boston",
+              "to": "New York City",
+              "distance_miles": 215,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air","ship"]
+            },
+            {
+              "from": "New York City",
+              "to": "Philadelphia",
+              "distance_miles": 95, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air","ship"]
+            }
+          ]
+        },
+        {
+          "route_id": "route10",
+          "segments": [
+            {
+              "from": "Boston",
+              "to": "Providence",
+              "distance_miles": 50,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train","ship"]
+            },
+            {
+              "from": "Providence",
+              "to": "Hartford",
+              "distance_miles": 102,
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train"]
+            },
+            {
+              "from": "Hartford",
+              "to": "Philadelphia",
+              "distance_miles": 196, 
+              "available_modes": ["light_truck","medium_truck","heavy_truck", "train", "air"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transportation_modes": [
+    {
+      "mode": "light_truck",
+      "description": "Suitable for small, less bulky shipments",
+      "speed_km_per_hr": 70,
+      "emissions_kg_per_km": 0.4,
+      "capacity": 2500,
+      "changeover_cost": {
+        "medium_truck": 50,
+        "heavy_truck": 100,
+        "ship": 200,
+        "air": 300
+      },
+      "pplbFromTo": {
+        "Los Angeles": {
+          "Chicago": 0.75,
+          "Denver": 0.65
+        },
+        "Chicago": {
+          "Pittsburgh": 0.55
+        },
+        "Pittsburgh": {
+          "New York": 0.70
+        },
+        "Denver": {
+          "Columbus": 0.80
+        },
+        "Columbus": {
+          "New York": 0.85
+        },
+        "Houston": {
+          "Memphis": 0.60,
+          "Dallas": 0.50
+        },
+        "Memphis": {
+          "St. Louis": 0.70
+        },
+        "St. Louis": {
+          "Chicago": 0.65
+        },
+        "Dallas": {
+          "Kansas City": 0.90
+        },
+        "Kansas City": {
+          "Chicago": 0.75
+        },
+        "Miami": {
+          "Orlando": 0.45,
+          "Tampa": 0.40
+        },
+        "Orlando": {
+          "Jacksonville": 0.85
+        },
+        "Jacksonville": {
+          "Atlanta": 0.75
+        },
+        "Tampa": {
+          "Atlanta": 0.60
+        },
+        "Seattle": {
+          "Portland": 1.25,
+          "Eugene": 0.95
+        },
+        "Portland": {
+          "Sacramento": 1.50
+        },
+        "Sacramento": {
+          "San Francisco": 1.60
+        },
+        "Eugene": {
+          "San Francisco": 1.10
+        },
+        "Boston": {
+          "New York City": 0.80,
+          "Providence": 0.85
+        },
+        "New York City": {
+          "Philadelphia": 0.75
+        },
+        "Providence": {
+          "Hartford": 0.80
+        },
+        "Hartford": {
+          "Philadelphia": 0.90
+        }
+      }
+    },
+    {
+      "mode": "medium_truck",
+      "description": "Balanced option for moderate shipments",
+      "speed_km_per_hr": 60,
+      "emissions_kg_per_km": 0.6,
+      "capacity": 5000,
+      "changeover_cost": {
+        "light_truck": 50,
+        "heavy_truck": 75,
+        "ship": 150,
+        "air": 250
+      },
+      "pplbFromTo": {
+        "Los Angeles": {
+          "Chicago": 1.00,
+          "Denver": 0.85
+        },
+        "Chicago": {
+          "Pittsburgh": 0.75
+        },
+        "Pittsburgh": {
+          "New York": 0.95
+        },
+        "Denver": {
+          "Columbus": 1.10
+        },
+        "Columbus": {
+          "New York": 1.15
+        },
+        "Houston": {
+          "Memphis": 0.80,
+          "Dallas": 0.70
+        },
+        "Memphis": {
+          "St. Louis": 0.95
+        },
+        "St. Louis": {
+          "Chicago": 0.90
+        },
+        "Dallas": {
+          "Kansas City": 1.20
+        },
+        "Kansas City": {
+          "Chicago": 1.00
+        },
+        "Miami": {
+          "Orlando": 0.65,
+          "Tampa": 0.55
+        },
+        "Orlando": {
+          "Jacksonville": 1.15
+        },
+        "Jacksonville": {
+          "Atlanta": 1.00
+        },
+        "Tampa": {
+          "Atlanta": 0.80
+        },
+        "Seattle": {
+          "Portland": 1.75,
+          "Eugene": 1.35
+        },
+        "Portland": {
+          "Sacramento": 2.10
+        },
+        "Sacramento": {
+          "San Francisco": 2.25
+        },
+        "Eugene": {
+          "San Francisco": 1.55
+        },
+        "Boston": {
+          "New York City": 1.10,
+          "Providence": 1.20
+        },
+        "New York City": {
+          "Philadelphia": 1.05
+        },
+        "Providence": {
+          "Hartford": 1.10
+        },
+        "Hartford": {
+          "Philadelphia": 1.25
+        }
+      }
+    },
+    {
+      "mode": "heavy_truck",
+      "description": "Designed for large and heavy shipments",
+      "speed_km_per_hr": 50,
+      "emissions_kg_per_km": 0.8,
+      "capacity": 8000,
+      "changeover_cost": {
+        "light_truck": 100,
+        "medium_truck": 75,
+        "ship": 125,
+        "air": 200
+      },
+      "pplbFromTo": {
+        "Los Angeles": {
+          "Chicago": 1.50,
+          "Denver": 1.25
+        },
+        "Chicago": {
+          "Pittsburgh": 1.00
+        },
+        "Pittsburgh": {
+          "New York": 1.20
+        },
+        "Denver": {
+          "Columbus": 1.40
+        },
+        "Columbus": {
+          "New York": 1.45
+        },
+        "Houston": {
+          "Memphis": 1.10,
+          "Dallas": 0.95
+        },
+        "Memphis": {
+          "St. Louis": 1.20
+        },
+        "St. Louis": {
+          "Chicago": 1.15
+        },
+        "Dallas": {
+          "Kansas City": 1.50
+        },
+        "Kansas City": {
+          "Chicago": 1.30
+        },
+        "Miami": {
+          "Orlando": 0.85,
+          "Tampa": 0.75
+        },
+        "Orlando": {
+          "Jacksonville": 1.40
+        },
+        "Jacksonville": {
+          "Atlanta": 1.20
+        },
+        "Tampa": {
+          "Atlanta": 1.00
+        },
+        "Seattle": {
+          "Portland": 2.20,
+          "Eugene": 1.70
+        },
+        "Portland": {
+          "Sacramento": 2.50
+        },
+        "Sacramento": {
+          "San Francisco": 2.75
+        },
+        "Eugene": {
+          "San Francisco": 1.90
+        },
+        "Boston": {
+          "New York City": 1.35,
+          "Providence": 1.50
+        },
+        "New York City": {
+          "Philadelphia": 1.30
+        },
+        "Providence": {
+          "Hartford": 1.40
+        },
+        "Hartford": {
+          "Philadelphia": 1.55
+        }
+      }
+    },
+    {
+      "mode": "ship",
+      "description": "Cost-effective for international bulk transport",
+      "speed_km_per_hr": 35,
+      "emissions_kg_per_km": 0.4,
+      "capacity": 13000,
+      "changeover_cost": {
+        "light_truck": 200,
+        "medium_truck": 150,
+        "heavy_truck": 125,
+        "air": 400
+      },
+        "pplbFromTo": {
+          "Los Angeles": {
+            "Chicago": 0.45  
+          },
+          "Pittsburgh": {
+            "New York": 0.36
+          },
+          "Houston": {
+            "Memphis": 0.33,
+            "Dallas": 0.28
+          },
+          "Miami": {
+            "Orlando": 0.25,
+            "Tampa": 0.22
+          },
+          "Orlando": {
+            "Jacksonville": 0.42
+          },
+          "Seattle": {
+            "Portland": 0.66
+          },
+          "Portland": {
+            "Sacramento": 0.75
+          },
+          "Sacramento": {
+            "San Francisco": 0.12
+          },
+          "Boston": {
+            "New York City": 0.40,
+            "Providence": 0.45
+          },
+          "New York City": {
+            "Philadelphia": 0.39
+          }
+        }
+      },   
+      {
+        "mode": "air",
+        "description": "Fastest transport option for urgent deliveries",
+        "speed_km_per_hr": 800,
+        "emissions_kg_per_km": 2.5,
+        "capacity": 9200,
+        "changeover_cost": {
+          "light_truck": 300,
+          "medium_truck": 250,
+          "heavy_truck": 200,
+          "ship": 400
+        },
+        "pplbFromTo": {
+          "Los Angeles": {
+            "Chicago": 4.50,  
+            "Denver": 2.10
+          },
+          "Chicago": {
+            "Pittsburgh": 2.10
+          },
+          "Pittsburgh": {
+            "New York": 1.50
+          },
+          "Denver": {
+            "Columbus": 5.70
+          },
+          "Columbus": {
+            "New York": 3.30
+          },
+          "Houston": {
+            "Memphis": 4.50,
+            "Dallas": 3.60
+          },
+          "Memphis": {
+            "St. Louis": 3.60
+          },
+          "St. Louis": {
+            "Chicago": 2.40
+          },
+          "Dallas": {
+            "Kansas City": 8.10
+          },
+          "Kansas City": {
+            "Chicago": 5.40
+          },
+          "Miami": {
+            "Orlando": 2.70,
+            "Tampa": 1.80
+          },
+          "Orlando": {
+            "Jacksonville": 8.10
+          },
+          "Jacksonville": {
+            "Atlanta": 7.20
+          },
+          "Tampa": {
+            "Atlanta": 5.40
+          },
+          "Seattle": {
+            "Portland": 19.80,
+            "Eugene": 5.88
+          },
+          "Portland": {
+            "Sacramento": 22.50
+          },
+          "Sacramento": {
+            "San Francisco": 27.00
+          },
+          "Eugene": {
+            "San Francisco": 7.20
+          },
+          "Boston": {
+            "New York City": 6.30,
+            "Providence": 8.10
+          },
+          "New York City": {
+            "Philadelphia": 4.08
+          },
+          "Providence": {
+            "Hartford": 6.72
+          },
+          "Hartford": {
+            "Philadelphia": 7.20
+          }
+        }
+      },
+      {
+        "mode": "train",
+        "description": "Efficient transport option for large shipments over long distances",
+        "speed_km_per_hr": 80,
+        "emissions_kg_per_km": 0.6,
+        "capacity": 12000,
+        "changeover_cost": {
+          "light_truck": 75,
+          "medium_truck": 65,
+          "heavy_truck": 55,
+          "ship": 150,
+          "air": 250
+        },
+        "pplbFromTo": {
+          "Los Angeles": {
+            "Chicago": 0.65,  
+            "Denver": 0.30
+          },
+          "Chicago": {
+            "Pittsburgh": 0.30
+          },
+          "Pittsburgh": {
+            "New York": 0.20
+          },
+          "Denver": {
+            "Columbus": 0.80
+          },
+          "Columbus": {
+            "New York": 0.45
+          },
+          "Houston": {
+            "Memphis": 0.60,
+            "Dallas": 0.50
+          },
+          "Memphis": {
+            "St. Louis": 0.45
+          },
+          "St. Louis": {
+            "Chicago": 0.35
+          },
+          "Dallas": {
+            "Kansas City": 1.10
+          },
+          "Kansas City": {
+            "Chicago": 0.75
+          },
+          "Miami": {
+            "Orlando": 0.40,
+            "Tampa": 0.35
+          },
+          "Orlando": {
+            "Jacksonville": 0.95
+          },
+          "Jacksonville": {
+            "Atlanta": 0.80
+          },
+          "Tampa": {
+            "Atlanta": 0.65
+          },
+          "Seattle": {
+            "Portland": 1.50,
+            "Eugene": 0.50
+          },
+          "Portland": {
+            "Sacramento": 1.65
+          },
+          "Sacramento": {
+            "San Francisco": 1.90
+          },
+          "Eugene": {
+            "San Francisco": 0.50
+          },
+          "Boston": {
+            "New York City": 0.90,
+            "Providence": 1.00
+          },
+          "New York City": {
+            "Philadelphia": 0.60
+          },
+          "Providence": {
+            "Hartford": 0.85
+          },
+          "Hartford": {
+            "Philadelphia": 0.90
+          }
+        }
+      }
+            
+  ]
+}

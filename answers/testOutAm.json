@@ -1,0 +1,181 @@
+{
+    "shipments": {
+        "shipment1": {
+            "quantity": 15000,
+            "route_id": "route2",
+            "total_cost": 9515.0,
+            "total_time": 19.7518306625,
+            "total_emissions": 821.3281878,
+            "constraints": true,
+            "weight_constraints": true,
+            "timeConstraint": true,
+            "route_details": [
+                {
+                    "from": "Los Angeles",
+                    "to": "Denver",
+                    "mode": "medium_truck",
+                    "distance": 1020,
+                    "cost": 3825.0,
+                    "time": 10.563307,
+                    "emissions": 380.279052
+                },
+                {
+                    "from": "Denver",
+                    "to": "Columbus",
+                    "mode": "train",
+                    "distance": 648,
+                    "cost": 3665.0,
+                    "time": 5.0331051,
+                    "emissions": 241.5890448
+                },
+                {
+                    "from": "Columbus",
+                    "to": "New York",
+                    "mode": "train",
+                    "distance": 535,
+                    "cost": 2025.0,
+                    "time": 4.1554185625,
+                    "emissions": 199.460091
+                }
+            ]
+        },
+        "shipment2": {
+            "quantity": 8000,
+            "route_id": "route4",
+            "total_cost": 28865.0,
+            "total_time": 7.202984412916668,
+            "total_emissions": 1115.0502595,
+            "constraints": true,
+            "weight_constraints": true,
+            "timeConstraint": true,
+            "route_details": [
+                {
+                    "from": "Houston",
+                    "to": "Dallas",
+                    "mode": "medium_truck",
+                    "distance": 239,
+                    "cost": 2800.0,
+                    "time": 2.475127816666667,
+                    "emissions": 89.1046014
+                },
+                {
+                    "from": "Dallas",
+                    "to": "Kansas City",
+                    "mode": "train",
+                    "distance": 556,
+                    "cost": 4465.0,
+                    "time": 4.3185284500000005,
+                    "emissions": 207.28936559999997
+                },
+                {
+                    "from": "Kansas City",
+                    "to": "Chicago",
+                    "mode": "air",
+                    "distance": 527,
+                    "cost": 21600.0,
+                    "time": 0.40932814624999997,
+                    "emissions": 818.6562925000001
+                }
+            ]
+        },
+        "shipment3": {
+            "quantity": 9300,
+            "route_id": "route6",
+            "total_cost": 1725.2,
+            "total_time": 9.018756228571428,
+            "total_emissions": 182.9316224,
+            "constraints": true,
+            "weight_constraints": true,
+            "timeConstraint": true,
+            "route_details": [
+                {
+                    "from": "Miami",
+                    "to": "Tampa",
+                    "mode": "ship",
+                    "distance": 280,
+                    "cost": 409.2,
+                    "time": 4.970968,
+                    "emissions": 69.593552
+                },
+                {
+                    "from": "Tampa",
+                    "to": "Atlanta",
+                    "mode": "light_truck",
+                    "distance": 456,
+                    "cost": 1316.0,
+                    "time": 4.047788228571428,
+                    "emissions": 113.3380704
+                }
+            ]
+        },
+        "shipment4": {
+            "quantity": 4000,
+            "route_id": "route8",
+            "total_cost": 12320.0,
+            "total_time": 2.54373753125,
+            "total_emissions": 842.2683905,
+            "constraints": true,
+            "weight_constraints": true,
+            "timeConstraint": true,
+            "route_details": [
+                {
+                    "from": "Seattle",
+                    "to": "Eugene",
+                    "mode": "train",
+                    "distance": 280,
+                    "cost": 800.0,
+                    "time": 2.1747985,
+                    "emissions": 104.390328
+                },
+                {
+                    "from": "Eugene",
+                    "to": "San Francisco",
+                    "mode": "air",
+                    "distance": 475,
+                    "cost": 11520.0,
+                    "time": 0.36893903125,
+                    "emissions": 737.8780625
+                }
+            ]
+        },
+        "shipment5": {
+            "quantity": 16000,
+            "route_id": "route10",
+            "total_cost": 72400.0,
+            "total_time": 1.3328407949999999,
+            "total_emissions": 361.1408252,
+            "constraints": true,
+            "weight_constraints": true,
+            "timeConstraint": true,
+            "route_details": [
+                {
+                    "from": "Boston",
+                    "to": "Providence",
+                    "mode": "train",
+                    "distance": 50,
+                    "cost": 8000.0,
+                    "time": 0.388356875,
+                    "emissions": 18.64113
+                },
+                {
+                    "from": "Providence",
+                    "to": "Hartford",
+                    "mode": "train",
+                    "distance": 102,
+                    "cost": 6800.0,
+                    "time": 0.7922480249999999,
+                    "emissions": 38.0279052
+                },
+                {
+                    "from": "Hartford",
+                    "to": "Philadelphia",
+                    "mode": "air",
+                    "distance": 196,
+                    "cost": 57600.0,
+                    "time": 0.152235895,
+                    "emissions": 304.47179
+                }
+            ]
+        }
+    }
+}
